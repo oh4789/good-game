@@ -9,18 +9,22 @@
 
 실행 링크는 소유자의 최신 배포 메시지에서 확인한다. 기존 비공개 접근 범위를 유지한다.
 
-- 배포 성공 확인: 2026-10-03 23:43:51 UTC, Site 게시 버전15 / 게임 v0.13
+- 게임 Web 배포 확인: 2026-10-03 23:43:51 UTC, Site 게시 버전15 / 게임 v0.13
+- 최신 Android 전달 페이지 배포 확인: 2026-10-03 23:52:49 UTC, Site 게시 버전16 / 게임 v0.13 유지
+- 최신 전달 페이지 배포 소스 커밋: `749c3c334b031e5b8aeff21cdc4816d99824822a`
 - 최종 게임 소스 커밋: `943787fe1a72051b494a5f2bd97fd9b8d35366c0`
-- 배포 소스 커밋: `658768b20ad7088560651e5b384d0f8e6cc37ae6`
+- 게임 Web 배포 소스 커밋: `658768b20ad7088560651e5b384d0f8e6cc37ae6`
 - PCK: 6,420,584 bytes, SHA256 `71ed936d211f20ecd5907ae6f6b6614f8962030851d45e2dd6beb655fff796d2`
 - SOURCE: Nightroad-Square-Defense-v0.13-SOURCE.zip, version12, 9,459,420 bytes, SHA256 `ba8d2c78921765c8eff1fe37c4c8328e0e4140bdb18889d9623289a31b6be534`
 - WEB: Nightroad-Square-Defense-v0.13-WEB.zip, version12, 256,286,232 bytes, SHA256 `df9bdb322846909ec08fab64f9a50ee0d011092bad517d5ea6ecc6942fc0826f`
 
-기존 SOURCE·WEB의 v0.12/version11 전체 바이트를 먼저 읽어 백업하고, 같은 항목을 version12로 갱신했다. 새 전체 파일을 다시 읽어 크기·SHA256·바이트 일치를 확인했다. 소유자 전용 접근과 이전 이력을 보존했다. 정적 Site 검증에서 이전13개 legacy 경로·정확한 엔진·저장 마운트를 확인했다. Web 배포 묶음은 기존 v0.12 Android 다운로드 파일을 보존했으며 v0.13 APK는 별도 갱신 대상이다. 이 영수증은 브라우저 WASM 실행이나 IndexedDB 지속 저장 합격을 뜻하지 않는다.
+기존 SOURCE·WEB의 v0.12/version11 전체 바이트를 먼저 읽어 백업하고, 같은 항목을 version12로 갱신했다. 새 전체 파일을 다시 읽어 크기·SHA256·바이트 일치를 확인했다. 소유자 전용 접근과 이전 이력을 보존했다. 정적 Site 검증에서 이전13개 legacy 경로·정확한 엔진·저장 마운트를 확인했다. 위 SOURCE·WEB version12는 Site15 Web 배포 시점 백업이며 Site16 Android 전달 변경은 포함하지 않는다. Site16은 게임·소스·legacy 파일을 그대로 두고 현재 Android 다운로드를 v0.13으로 교체했다. 이 영수증은 브라우저 WASM 실행이나 IndexedDB 지속 저장 합격을 뜻하지 않는다.
 
 구현·검수·보존 기록과 휴대폰 점검 순서는 [v0.13 테스트 인계 보고](proposals/2026-10-03_main-v13-test-handoff-report.md)를 따른다. [v0.12 보고](proposals/2026-10-03_main-v12-release-integration-report.md)와 모든 선행 팀 결과는 당시 이력으로 보존한다. 소스·배포 커밋과 ZIP·PCK 해시는 서로 다른 식별자다.
 
-Android v0.13 시험 APK는 제작·파일 검증됐다. Nightroad-v0.13-Android-arm64-optimized-test.apk, 31,996,783 bytes, SHA256 `343a6a887384c6f27b93df3af5ccc5ad45ad1baf475972fc9df0d7538ca8bdc7`. Android7+(minSDK24), target36, ARM64-v8a만, 세로 화면, 요청 권한 없음. 패키지 org.godotengine.nightroad.test / versionCode13 / 0.13-test이며 v0.12와 같은 프로젝트 시험 서명이다. manifest는 버전 필드만 달라졌다. v2/v3 서명·16KB 정렬과 APK 리소스8개 suite(ObjectiveUI888검사·ObjectiveParity 포함)가 통과했다. 백업은 저장됐으나 이 APK의 다운로드 전달은 아직 별도 단계다. v0.12 다운로드 페이지는 앞서 소유자에게 제공됐다. 다운로드·설치·업데이트 시 저장 보존·실제 기기 플레이는 미검증이다.
+Android v0.13 시험 APK는 제작·파일 검증됐다. Nightroad-v0.13-Android-arm64-optimized-test.apk, 31,996,783 bytes, SHA256 `343a6a887384c6f27b93df3af5ccc5ad45ad1baf475972fc9df0d7538ca8bdc7`. Android7+(minSDK24), target36, ARM64-v8a만, 세로 화면, 요청 권한 없음. 패키지 org.godotengine.nightroad.test / versionCode13 / 0.13-test이며 v0.12와 같은 프로젝트 시험 서명이다. manifest는 버전 필드만 달라졌다. v2/v3 서명·16KB 정렬과 APK 리소스8개 suite(ObjectiveUI888검사·ObjectiveParity 포함)가 통과했다. APK 백업과 소유자 전용 v0.13 다운로드 페이지 배포를 확인했다. 다운로드 도구10검사, 분할 파일 재조립의 APK 크기/해시 일치, 배포 archive278개 전체 자산의 바이트 읽기 검증이 통과했다. 실제 브라우저/휴대폰 다운로드·설치·업데이트 시 저장 보존·기기 플레이는 미검증이다.
+
+Site16의 현재 다운로드에는 v0.13만 제공한다. 256MiB 배포 archive 한도로 v0.12 활성 payload를 교체했지만, 교체 전 기존 Library 파일과 과거 Site14 소스의 분할 파일을 각각 읽기/재조립해 정확한 해시로 복구 가능함을 확인했다. Library·Git·Site의 이력은 삭제하거나 다시 쓰지 않았다. 이전 APK가 현재 페이지에 함께 남아 있다는 뜻은 아니다.
 
 ## 같은 사용자의 소스 전달물
 
