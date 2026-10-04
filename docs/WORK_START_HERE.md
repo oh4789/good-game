@@ -8,9 +8,11 @@
 
 ## 최신 구현과 배포 담당
 
-후속 [v0.2 기능·v0.3 밸런스 후보 검증](proposals/2026-10-04_merge-v03-unpublished-balance-candidate.md)을 먼저 함께 확인한다.4×4·전투 중 관리·비비 화염/저격·성급 상점·자동 준비는 미게시 후보에 구현됐고3성은 잠금이다. 소스/PCK 검증과 APK 전달을 구분한다. 현재 안정 v0.15와 별도 실험 v0.1 다운로드는 바뀌지 않았다. 팀은 이미 끝난 후보 기능을 새로 만들지 말고 현재 보고의 남은 기기·사람 검수와 사양 정합성을 우선한다.
+최우선 P1 제보: v0.3 실제 휴대폰의 자금 부족 성급 상점에서 닫기가 동작하지 않는 증상 확인. 실행 중 화면 갱신의 원인을 네이티브에서 재현했으며 수정 완료가 아니다. 두리가 수정 파일을 소유하고 QA/개발2는 재현·인수만 맡는다. 앱 삭제·초기화·재설치 요구 없이 현재 진행을 보존한다.
 
-[안정 v0.15 배포 보고](proposals/2026-10-04_main-v15-canceled-input-release.md)가 최신 기준이다. Site18에서 Web/Android 취소 입력 수정을 배포했고 모델·경제·저장을 유지했다. 실제 기기/브라우저 인수는 아직 열려 있다. 별도 합성 실험 v0.1/Site1은 변경하지 않았다. 아래 v0.14/v0.13 설명은 선행 이력으로 읽는다.
+후속 [v0.3 검증·새 앱 APK 전달](proposals/2026-10-04_merge-v03-unpublished-balance-candidate.md)의13:49 UTC 추가 기록을 먼저 확인한다. 승인된 새 별도 앱으로 실험 Site2에 전달됐고4×4·전투 중 관리·비비 화염/저격·성급 상점·자동 준비를 포함한다.3성은 잠금이다. 이전 v0.1은 별도 다운로드 링크로 보존하고 안정 v0.15/Site18은 그대로다. 새 앱 설치·동시설치·Continue·터치·스피커 등 실제 기기 인수는 미검증이다. 팀은 완료된 기능을 다시 만들지 말고 남은 기기·사람 검수와 사양 정합성을 우선한다.
+
+[안정 v0.15 배포 보고](proposals/2026-10-04_main-v15-canceled-input-release.md)가 최신 기준이다. Site18에서 Web/Android 취소 입력 수정을 배포했고 모델·경제·저장을 유지했다. 실제 기기/브라우저 인수는 아직 열려 있다. 안정판과 별개로 실험 Site2는 v0.3 새 앱과 이전 v0.1 다운로드를 제공한다. 아래 v0.14/v0.13 설명은 선행 이력으로 읽는다.
 
 Android v0.14는 사용자 화면 제보를 계기로 독립 재현한 작은 UI의 scale 수정이다. [v0.14 인계](proposals/2026-10-04_android-v14-ui-scale-handoff.md)를 먼저 확인한다. 당시 Web v0.13을 유지한 Android 전용 수정이었고 현재는 안정 v0.15에 포함된다. 실제 휴대폰 업데이트·이어하기는 미검증이다. [능력 구매·3→2성 합성 실험](proposals/2026-10-04_approved-hero-ability-merge-experiment.md)은 별도 v0.1 APK로 구현·전달됐다. [검증·전달 결과](proposals/2026-10-04_merge-experiment-v01-delivery-report.md)를 함께 읽는다. 합성 실험을 안정판에 합치지 않았고 실제 기기·사람 인수는 열려 있다.96개 자동 원정 모두 무누수 승리로 밸런스는 미확정이다.3성은 구현하지 않았다. 팀은 사양/QA 정합성을 먼저 검토하고 메인 구현과 코드 편집을 충돌시키지 않는다.
 
@@ -34,22 +36,22 @@ QA 로그인이 막혀 있어도 기획 등 다른 팀에서 독립적으로 할
 
 1. [현재 구현·소스·전달물](CURRENT_IMPLEMENTATION.md)
 2. [v0.13 테스트 인계](proposals/2026-10-03_main-v13-test-handoff-report.md), [v0.12 일반/QA 배속 기준](proposals/2026-10-03_main-v12-release-integration-report.md), [1차 완성 인수표](proposals/2026-10-03_first-completion-acceptance.md) 및 [v0.9 확정 보충](proposals/2026-10-03_v09-canonical-speed-recruitment-addendum.md)과 충돌하지 않는 [기본 게임 규칙](proposals/2026-10-03_v03-canonical-decisions.md)
-3. [여섯 팀 협업과 인계 규약](work-orders/2026-10-03-collaboration-protocol.md)
+3. [최신 v0.3 협업·입력·소유 기준](work-orders/2026-10-04-v03-coordination.md), 충돌하지 않는 [이전 협업 규약](work-orders/2026-10-03-collaboration-protocol.md)
 4. 아래 자기 팀 지시서
 5. `docs/proposals/`의 같은 작업 ID 또는 내용이 같은 선행 결과
 
 기준 문서의 확인된 커밋은 [6412c525](https://github.com/oh4789/good-game/commit/6412c5252f6e6da78f402f32aa47bdf937082f12)다. 최신 날짜의 일반 제안이 현재 규칙을 자동으로 대체하지 않는다. 진행 상태와 남은 일은 새 결과 보고까지 함께 읽는다.
 
-| 맡은 팀 | 지시서 | 이번 우선 작업 |
+| 맡은 팀 | 최신 지시서 | 이번 우선 작업 |
 |---|---|---|
-| 기획 | [기획 작업](work-orders/2026-10-03-planning.md) | PL-01/02의 기존 20·21 문서를 재사용하고 부족분만 보완 |
-| 디자인 | [디자인 작업](work-orders/2026-10-03-design.md) | DS-01 실제 비비 에셋 정리와 볼 수 있는 동작 증거 |
-| 음향 | [음향 작업](work-orders/2026-10-03-audio.md) | AU-01 청취 차단 해소, AU-02 실제 파일·이벤트 인계 |
-| QA | [QA 작업](work-orders/2026-10-03-qa.md) | QA-01 승인된 실행 접근을 받은 뒤 실제 플레이 |
-| 개발1 | [개발1 작업](work-orders/2026-10-03-development1.md) | DV1-01 실제 소스 기반 8조합 벤치마크 |
-| 개발2 | [개발2 작업](work-orders/2026-10-03-development2.md) | DV2-01 실제 소스 기반 UI·접근성 검수 도구 |
+| 기획 | [기획 작업](work-orders/2026-10-04-planning-v03.md) | PL-12 적용 대상/성장 기산점 문구·M01–M08 증거 인수 |
+| 디자인 | [디자인 작업](work-orders/2026-10-04-design-v03.md) | DS-07 16칸·화염/저격·합성 상태 가독성 |
+| 음향 | [음향 작업](work-orders/2026-10-04-audio-v03.md) | AU-03 death/hit 정책·기존 믹스 청취 triage |
+| QA | [QA 작업](work-orders/2026-10-04-qa-v03.md) | QA-04 최우선 상점 닫기 live-frame 재현/수정 인수·격리 저장 |
+| 개발1 | [개발1 작업](work-orders/2026-10-04-development1-v03.md) | DV1-P08 10웨이브 일반 적 누적 실패 원인 계측 |
+| 개발2 | [개발2 작업](work-orders/2026-10-04-development2-v03.md) | DV2-P01 최우선 상점 닫기 live-frame·작은 화면 입력/접근성 |
 
-팀을 아직 배정받지 않았다면 사용자에게 자신의 팀만 확인한다. 다른 팀의 일을 임의로 가져오지 않는다. 두리가 최종 앱을 개발하고 각 팀 산출물을 통합한다.
+새 지시서는 위 표를 따른다.10월3일의 작업ID/기대값은 이력이며 이미 완료한 일을 반복하지 않는다. 팀을 아직 배정받지 않았다면 사용자에게 자신의 팀만 확인한다. 다른 팀의 일을 임의로 가져오지 않는다. 두리가 최종 앱을 개발하고 각 팀 산출물을 통합한다.
 
 ## 한 번 시작하면 검증과 보고까지
 
