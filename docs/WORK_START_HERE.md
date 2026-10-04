@@ -8,7 +8,7 @@
 
 ## 최신 구현과 배포 담당
 
-Android v0.14는 사용자 화면 제보를 계기로 독립 재현한 작은 UI의 scale 수정이다. [v0.14 인계](proposals/2026-10-04_android-v14-ui-scale-handoff.md)를 먼저 확인한다. Web v0.13과 게임 모델·저장 형식은 그대로이며 실제 휴대폰 업데이트·이어하기는 미검증이다. [능력 구매·3→2성 합성 실험](proposals/2026-10-04_approved-hero-ability-merge-experiment.md)은 사용자 승인 후 격리 후보에서 IN_PROGRESS다. 안정 배포와 구분하며 최신 적용 범위는 이 승인 문서를 따른다. 팀은 사양/QA 정합성을 먼저 검토하고 메인 구현과 코드 편집을 충돌시키지 않는다.
+Android v0.14는 사용자 화면 제보를 계기로 독립 재현한 작은 UI의 scale 수정이다. [v0.14 인계](proposals/2026-10-04_android-v14-ui-scale-handoff.md)를 먼저 확인한다. Web v0.13과 게임 모델·저장 형식은 그대로이며 실제 휴대폰 업데이트·이어하기는 미검증이다. [능력 구매·3→2성 합성 실험](proposals/2026-10-04_approved-hero-ability-merge-experiment.md)은 별도 v0.1 APK로 구현·전달됐다. [검증·전달 결과](proposals/2026-10-04_merge-experiment-v01-delivery-report.md)를 함께 읽는다. 안정판은 변경하지 않았고 실제 기기·사람 인수는 열려 있다.96개 자동 원정 모두 무누수 승리로 밸런스는 미확정이다.3성은 구현하지 않았다. 팀은 사양/QA 정합성을 먼저 검토하고 메인 구현과 코드 편집을 충돌시키지 않는다.
 
 [CURRENT_IMPLEMENTATION](CURRENT_IMPLEMENTATION.md)을 먼저 읽는다. 현재 v0.13의 일반 속도는 1·2·3배다. 메뉴→도움말의 세션 한정 QA 토글을 켰을 때만 5·10배가 열리고 속도 버튼에 QA 표식이 항상 남는다. 새 앱 시작은 QA OFF이며 이전 5·10배 저장은 일반 최대3배로 제한해 이어한다. 모델·RNG·나머지 저장 진행을 보존한다. 누수·승패음은 제한된 시작 여유와 낮은 우선순위 voice 대체를 받지만 전체8 voice·1초30회·cooldown·mute·중단 제한은 유지한다. 복원 때 과거 소리를 재생하지 않는다.
 
